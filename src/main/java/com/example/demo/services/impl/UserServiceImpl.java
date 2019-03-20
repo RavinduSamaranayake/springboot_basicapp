@@ -9,7 +9,7 @@ public class UserServiceImpl implements UserServices {
     @Override
     public String findAllUsers() {
         //search db and reurn all users
-          
+
         return "These are the all users";
     }
 }
