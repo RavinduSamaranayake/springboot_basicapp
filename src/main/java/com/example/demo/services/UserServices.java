@@ -8,4 +8,6 @@ public interface UserServices {
     List<UserDTO> findAllUsers();
 
     String saveUser(UserDTO userdata);
+
+    String modifyUser(UserDTO curUserdata);
 }

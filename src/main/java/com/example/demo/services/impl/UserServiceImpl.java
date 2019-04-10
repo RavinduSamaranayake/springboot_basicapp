@@ -25,5 +25,19 @@ public class UserServiceImpl implements UserServices {
     public String saveUser(UserDTO userdata) {
         userRepository.save(userdata); // save the data to user table
         return "Data Saved";
+
+    }
+
+    @Override
+    public String modifyUser(UserDTO curUserdata) {
+        String msg = null;
+        if(curUserdata.getId() != null){ //check when user is existing or not... if user is existing then updated user is replace
+            userRepository.save(curUserdata);
+            msg = "Data Updated";
+        }
+        else{
+            msg = "Error";
+        }
+        return msg;
     }
 }

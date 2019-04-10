@@ -22,4 +22,10 @@ public class User {
     public String addUser(@RequestBody UserDTO Userdata){
         return userServices.saveUser(Userdata);
     }
+
+    @PutMapping("/update")
+    public String updateUser(@RequestBody UserDTO curUserdata){
+        return userServices.modifyUser(curUserdata);
+    }
+
 }

@@ -11,8 +11,11 @@ public class UserDTO {
     @Column(name = "user_id")
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "firstname")
+    private String fname;
+
+    @Column(name = "lastname")
+    private String lname;
 
     @Column(name = "email")
     private String email;
@@ -25,12 +28,21 @@ public class UserDTO {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFname() {
+        return fname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getLname() {
+        return lname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public void setFName(String fname)
+    {
+        this.fname = fname;
     }
 
     public String getEmail() {
