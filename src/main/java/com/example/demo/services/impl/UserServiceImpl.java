@@ -40,4 +40,11 @@ public class UserServiceImpl implements UserServices {
         }
         return msg;
     }
+
+    @Override
+    public String DelById(Integer id) {
+
+        userRepository.deleteById(id);
+        return "Deleted Item";// return the entity
+    }
 }

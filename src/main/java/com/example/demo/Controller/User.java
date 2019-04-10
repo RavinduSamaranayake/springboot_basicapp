@@ -13,19 +13,24 @@ public class User {
     @Autowired
     private UserServices userServices;
 
-    @GetMapping("/all")
+    @GetMapping("/all") //get all data
     public List<UserDTO> allUsers() {
         return userServices.findAllUsers();
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add") //add user
     public String addUser(@RequestBody UserDTO Userdata){
         return userServices.saveUser(Userdata);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update") //update user
     public String updateUser(@RequestBody UserDTO curUserdata){
         return userServices.modifyUser(curUserdata);
+    }
+
+    @GetMapping("/delete/{id}") //find user by id
+    public String getUserById(@PathVariable Integer id){  //path variable is the Integer Id
+         return userServices.DelById(id);
     }
 
 }

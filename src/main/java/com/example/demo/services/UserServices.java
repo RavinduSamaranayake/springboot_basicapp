@@ -10,4 +10,6 @@ public interface UserServices {
     String saveUser(UserDTO userdata);
 
     String modifyUser(UserDTO curUserdata);
+
+    String DelById(Integer id);
 }
