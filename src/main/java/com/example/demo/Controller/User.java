@@ -1,9 +1,10 @@
 package com.example.demo.Controller;
+import com.example.demo.model.UserDTO;
 import com.example.demo.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -13,7 +14,12 @@ public class User {
     private UserServices userServices;
 
     @GetMapping("/all")
-    public String getall() {
+    public List<UserDTO> allUsers() {
         return userServices.findAllUsers();
+    }
+
+    @PostMapping("/add")
+    public String addUser(@RequestBody UserDTO Userdata){
+        return userServices.saveUser(Userdata);
     }
 }

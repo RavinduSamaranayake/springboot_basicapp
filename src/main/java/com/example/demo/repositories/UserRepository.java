@@ -10,5 +10,4 @@ public interface UserRepository extends JpaRepository<UserDTO,Integer> {
     //delete
     //update
     //custom query
-
 }

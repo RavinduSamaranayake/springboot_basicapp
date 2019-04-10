@@ -1,5 +1,11 @@
 package com.example.demo.services;
 
+import com.example.demo.model.UserDTO;
+
+import java.util.List;
+
 public interface UserServices {
-    String findAllUsers();
+    List<UserDTO> findAllUsers();
+
+    String saveUser(UserDTO userdata);
 }
