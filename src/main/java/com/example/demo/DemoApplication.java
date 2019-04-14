@@ -13,9 +13,9 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String sayhello(){
-        return "Hello Spring boot......";
+        return "Hello JAVA Spring boot......";
     }
 
 
