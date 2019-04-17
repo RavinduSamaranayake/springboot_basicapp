@@ -14,9 +14,7 @@ public class DemoApplication {
     }
 
     @RequestMapping("/")
-    public String sayhello(){
+    public String sayhello() {
         return "Hello JAVA Spring boot......";
     }
-
-
 }
