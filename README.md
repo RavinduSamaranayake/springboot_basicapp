@@ -1,1 +1,1 @@
-# springboot_basicapp
+# springboot sample app.
